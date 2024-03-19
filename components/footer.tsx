@@ -19,7 +19,7 @@ const Footer = () => {
     },
     {
       icon: <Instagram className="stroke-primary hover:stroke-secondary size-9" />,
-      link: "www.linkedin.com",
+      link: "www.Instagram.com",
     },
   ];
   return (

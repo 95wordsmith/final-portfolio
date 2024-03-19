@@ -31,7 +31,7 @@ const HeroPage = () => {
         <h3 className="font-semibold tracking-wide text-2xl pb-10">
           Full-Stack Software Engineer And Project Manager
         </h3>
-        <p className="tracking-wide font-thin text-base/relaxed pb-12">
+        <p className="tracking-wide  text-base/relaxed pb-12">
           Experienced Senior software engieer with over 5 years of expertise in
           developing features accross both backend and frontend frameworks
           including ReactJs and NextJs, Node Js and express and Python and

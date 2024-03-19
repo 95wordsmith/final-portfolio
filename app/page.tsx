@@ -4,6 +4,7 @@ import Services from "@/components/services";
 import Resume from "@/components/resume";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
+import Clients from "@/components/clients";
 
 
 export default function Home() {
@@ -19,9 +20,10 @@ export default function Home() {
     <div className="border-2 border-muted mt-10"></div>
     <Resume/>
     <div className="border-2 border-muted mt-10"></div>
+    <Clients/>
+    <div className="border-2 border-muted mt-10"></div>
     <Contact/>
     <div className="border-2 border-muted mt-10"></div>
-
     </main>
     <Footer/>
     </div>
