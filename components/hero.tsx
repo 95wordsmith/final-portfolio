@@ -2,33 +2,34 @@
 import Image from "next/image";
 import { Github, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
+import HeroCarousel from "./hero-carousel";
 
 const socialLinks = [
   {
-    icon: <Twitter className="stroke-primary size-7" />,
+    icon: <Twitter className="stroke-primary hover:stroke-secondary size-8" />,
     link: "www.twiiter.com",
   },
   {
-    icon: <Github className="stroke-primary size-7" />,
+    icon: <Github className="stroke-primary hover:stroke-secondary size-8" />,
     link: "www.github.com",
   },
   {
-    icon: <Linkedin className="stroke-primary size-7" />,
+    icon: <Linkedin className="stroke-primary hover:stroke-secondary size-8" />,
     link: "www.linkedin.com",
   },
 ];
 const HeroPage = () => {
   return (
-    <div className="flex justify-center md:justify-between flex-wrap ">
-      <div className="w-[65%] text-primary ">
+    <div className="flex  md:justify-between flex-wrap ">
+      <div className="lg:w-[65%] text-primary ">
         <h2 className="font-semibold text-xl pb-5">
           Hello, <span className="text-secondary">I'm</span>
         </h2>
         <h1 className="font-bold  text-6xl tracking-wide pb-5">
           Anthony Atta-Konadu
         </h1>
-        <h3 className="font-bold tracking-wide text-2xl pb-10">
-          Project Manager And Software Engineer
+        <h3 className="font-semibold tracking-wide text-2xl pb-10">
+          Full-Stack Software Engineer And Project Manager
         </h3>
         <p className="tracking-wide font-thin text-base/relaxed pb-12">
           Experienced Senior software engieer with over 5 years of expertise in
@@ -36,16 +37,27 @@ const HeroPage = () => {
           including ReactJs and NextJs, Node Js and express and Python and
           Django coupled.
         </p>
-        <h4 className="font-semibold text-base pb-7">FIND ME ON</h4>
 
-        <div className="flex gap-3 pb-16 ">
-          {socialLinks.map((ele, index) => (
-            <div className="bg-muted rounded-sm w-14 h-14 flex  items-center justify-center">
-              <Link key={index} href={ele.link}>
-                {ele.icon}
-              </Link>
+        <div className="grid grid-cols-1 lg:grid-cols-2 pb-4">
+          <div className="">
+            
+            <h4 className="font-semibold text-base pb-5">FIND ME ON</h4>
+            <div className="flex gap-3 pb-10 ">
+              {socialLinks.map((ele) => (
+                <div
+                  key={ele.link}
+                  className="bg-muted rounded-sm w-16 h-16 flex  items-center justify-center"
+                >
+                  <Link href={ele.link}>{ele.icon}</Link>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+          <div className="">
+          <h4 className="font-semibold text-base pb-5 uppercase">Skills</h4>
+
+            <HeroCarousel />
+          </div>
         </div>
 
         <div className="flex  flex-wrap gap-8 lg:gap-12 xl:gap-16">
@@ -63,7 +75,7 @@ const HeroPage = () => {
           </div>
         </div>
       </div>
-      <div className="w-[35]  relative">
+      <div className="lg:w-[35]  relative">
         <Image
           className="contain  z-50"
           src={"/profileImg.png"}

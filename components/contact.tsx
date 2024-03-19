@@ -60,7 +60,7 @@ const Contact = () => {
     console.log(values);
   };
   return (
-    <>
+    <div id="contact">
    
     <p className="text-center text-secondary text-sm pt-12 pb-2">CONTACT</p>
    <h1 className="text-primary font-bold text-4xl pb-8 text-center">Contact With Me</h1>
@@ -163,7 +163,7 @@ const Contact = () => {
         </Card>
       </div>
     </div>
-    </>
+    </div>
   );
 };
 

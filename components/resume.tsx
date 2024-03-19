@@ -41,7 +41,7 @@ const qualificationsData=[
 
 const Resume = () => {
   return ( 
-    <>
+    <div id="resume">
     <p className="text-center text-secondary text-sm pt-12 pb-2">YEARS OF EXPERIENCE</p>
    <h1 className="text-primary font-bold text-4xl pb-6 text-center">My Resume</h1>
   <div className="grid grid-cols-1 gap-8 lg:gap-0 lg:grid-cols-2 pb-16 ">
@@ -93,7 +93,7 @@ const Resume = () => {
   </div>
   {/*  */}
   </div>
-  </>
+  </div>
    );
 }
  
