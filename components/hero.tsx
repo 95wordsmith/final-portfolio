@@ -4,43 +4,45 @@ import { Github, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
 import HeroCarousel from "./hero-carousel";
 
+
 const socialLinks = [
   {
     icon: <Twitter className="stroke-primary hover:stroke-secondary size-8" />,
-    link: "www.twiiter.com",
+    link: "https://twitter.com/_Mike_Anthonyy",
   },
   {
     icon: <Github className="stroke-primary hover:stroke-secondary size-8" />,
-    link: "www.github.com",
+    link: "https://github.com/95wordsmith",
   },
   {
     icon: <Linkedin className="stroke-primary hover:stroke-secondary size-8" />,
-    link: "www.linkedin.com",
+    link: "https://www.linkedin.com/in/anthony-nana-yaw-atta-konadu-msc-pmp-%C2%AE-b7b252179/",
   },
 ];
 const HeroPage = () => {
   return (
     <div className="flex  md:justify-between flex-wrap ">
       <div className="lg:w-[65%] text-primary ">
-        <h2 className="font-semibold text-xl pb-5">
+        <h2 className="font-semibold text-xl pb-4">
           Hello, <span className="text-secondary">I'm</span>
         </h2>
-        <h1 className="font-bold  text-6xl tracking-wide pb-5">
+        <h1 className="font-bold  text-6xl tracking-wide pb-4">
           Anthony Atta-Konadu
         </h1>
-        <h3 className="font-semibold tracking-wide text-2xl pb-10">
+        <h3 className="font-semibold  text-2xl pb-8">
           Full-Stack Software Engineer And Project Manager
         </h3>
-        <p className="tracking-wide  text-base/relaxed pb-12">
-          Experienced Senior software engieer with over 5 years of expertise in
-          developing features accross both backend and frontend frameworks
-          including ReactJs and NextJs, Node Js and express and Python and
-          Django coupled.
+        <p className="text-base/relaxed pb-12">
+          Experienced senior software engineer with over 7 years of
+          expertise in developing features across both backend and frontend
+          frameworks, possessing a collective background in project management
+          and the ability to effectively lead development teams through the
+          software development cycle. I am available for freelance,
+          consultation, or full-time work opportunities.
         </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 pb-4">
-          <div className="">
-            
+        <div className="grid grid-cols-1 lg:grid-cols-2 pb-3">
+          <div >
             <h4 className="font-semibold text-base pb-5">FIND ME ON</h4>
             <div className="flex gap-3 pb-10 ">
               {socialLinks.map((ele) => (
@@ -48,13 +50,13 @@ const HeroPage = () => {
                   key={ele.link}
                   className="bg-muted rounded-sm w-16 h-16 flex  items-center justify-center"
                 >
-                  <Link href={ele.link}>{ele.icon}</Link>
+                  <Link target="_blank" href={ele.link}>{ele.icon}</Link>
                 </div>
               ))}
             </div>
           </div>
           <div className="">
-          <h4 className="font-semibold text-base pb-5 uppercase">Skills</h4>
+            <h4 className="font-semibold text-base pb-5 uppercase">Skills</h4>
 
             <HeroCarousel />
           </div>

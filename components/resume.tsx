@@ -5,36 +5,36 @@ const experienceData=[
   {
     role:'M.I.S Officer',
     company:'Ghana Free Zones Authority (01/21-PRESENT)',
-    description:'Assisted the successful implementation of a World Bank funded single-window project by fostering close stakeholder collaboration throughout the SDLC (design, development reviews, testing) resulting in project success.'
+    description:'Collaborated and assisted in building, testing and deployment of a world-bank funded ERP system for company operations.'
   },
   {
     role:'Senior Software Engineer ',
     company:'Scratch Code Academy (03/19-01/21:FT) (01/21-PRESENT)',
-    description:' Led a team of developers and consultants in delivering 10+ high-performing web applications, prioritizing scalability, performance, and security throughout the CI/CD pipeline.'
+    description:'Developed and Deployed over 10+ full-stack applications with ReactJs, NextJs and NodeJs and assisted in the mentoring and training of junior or aspiring developers.'
   },
   {
     role:'Frontend Engineer',
     company:'DecentPak Ventures (08/18-03/19)',
-    description:'Migrated 80% of frontend components to functional components (React 16) for improved readability and maintainability.'
+    description:'Implemented payment features on the e-commerce platform and dashboard analytics with charts to track user enagement.'
   },
   
 
 ]
 const qualificationsData=[
   {
-    title:'Msc Project Management',
+    title:'MSC. Project Management',
     institution:'KNUST (01/21-06/22)',
-    description:'Assisted the successful implementation of a World Bank funded single-window project by fostering close stakeholder collaboration throughout the SDLC (design, development reviews, testing) resulting in project success.'
+    description:''
   },
   {
     title:'PMP Certificate',
     institution:'Project Management Institute (26/22)',
-    description:' Led a team of developers and consultants in delivering 10+ high-performing web applications, prioritizing scalability, performance, and security throughout the CI/CD pipeline.'
+    description:''
   },
   {
     title:'B.A History',
     institution:'KNUST (09/13-06/17)',
-    description:'Migrated 80% of frontend components to functional components (React 16) for improved readability and maintainability.'
+    description:''
   },
 
 ]
@@ -58,7 +58,7 @@ const Resume = () => {
       {/* <div /> */}
       {/* <div className="w-3 h-3 bg-muted rounded-full absolute left-[-8px] top-20"/>
       <div className="border-t-4 border-muted z-0 w-[56px] absolute left-0 top-[57px]"></div> */}
-      <Card key={ele.role} className="p-8">
+      <Card key={ele.role} className="p-8 h-52">
         <CardTitle className="pb-2">{ele.role}</CardTitle>
         <p className="text-secondary pb-6 text-xs uppercase">{ele.company}</p>
         <CardDescription className={cn('text-base ')}>{ele.description}</CardDescription>
@@ -81,7 +81,7 @@ const Resume = () => {
     <div className="relative flex flex-col space-y-7 w-[83%] mx-auto">
 
     {qualificationsData.map((ele)=>(
-      <Card key={ele.title} className="p-8">
+      <Card key={ele.title} className="p-8 h-52">
         <CardTitle className="pb-2">{ele.title}</CardTitle>
         <p className="text-secondary pb-6 text-xs uppercase">{ele.institution}</p>
         <CardDescription className={cn('text-base ')}>{ele.description}</CardDescription>

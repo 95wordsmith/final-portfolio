@@ -18,6 +18,7 @@ import { useForm } from "react-hook-form";
 import { Phone, Mail, Send, Map, CircleCheckBig } from "lucide-react";
 import { Card } from "./ui/card";
 import { cn } from "@/lib/utils";
+
 const sideDetails = [
   {
     icon: <Map className="stroke-secondary size-9 " />,
