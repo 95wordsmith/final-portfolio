@@ -5,6 +5,7 @@ import Resume from "@/components/resume";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 import Clients from "@/components/clients";
+import Projects from "@/components/projects";
 
 
 export default function Home() {
@@ -18,6 +19,9 @@ export default function Home() {
     <div className="border-2 border-muted mt-10"></div>
     <Services/>
     <div className="border-2 border-muted mt-10"></div>
+    <Projects/>
+    <div className="border-2 border-muted mt-10"></div>
+
     <Resume/>
     <div className="border-2 border-muted mt-10"></div>
     <Clients/>

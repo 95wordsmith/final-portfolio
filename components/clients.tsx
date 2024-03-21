@@ -1,4 +1,6 @@
+'use client'
 import { Card } from "./ui/card";
+import {motion} from 'framer-motion'
 import Image from "next/image";
 const clientsData = [ 
   {
@@ -19,8 +21,21 @@ const clientsData = [
   }
  ]
 const Clients = () => {
+  const clientVariant = {
+    outside:{
+      scale: 0
+    },
+    inside:{
+      scale:[1,0.2,0.5,1],
+      
+      transition:{
+        duration:2
+      }
+    }
+  
+  }
   return ( 
-    <div>
+    <motion.div variants={clientVariant} initial='outside' whileInView='inside' viewport={{ once: true }}>
           <p className="text-center text-secondary text-sm pt-12 pb-2">BEST CUSTOMERS</p>
    <h1 className="text-primary font-bold text-4xl pb-8 text-center">Clients and Affiliations</h1>
 
@@ -32,7 +47,7 @@ const Clients = () => {
       </Card>
     ))}
    </div>
-    </div>
+    </motion.div>
    );
 }
  
