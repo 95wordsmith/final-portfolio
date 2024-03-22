@@ -73,7 +73,7 @@ const Resume = () => {
             <div className="flex flex-col space-y-7 w-[83%] mx-auto">
               {experienceData.map((ele) => (
                 <motion.div key={ele.role} initial={{ opacity: 0 }} viewport={{ once: true }} whileInView={{ opacity: 1 }} transition={{ delay: 0.7, duration: 1 }}>
-                  <Card className="p-8 h-64 md:h-60">
+                  <Card className="p-8 lg:h-60">
                     <CardTitle className="pb-2">{ele.role}</CardTitle>
                     <p className="text-secondary pb-6 text-xs uppercase">{ele.company}</p>
                     <CardDescription className={cn('text-base ')}>{ele.description}</CardDescription>
