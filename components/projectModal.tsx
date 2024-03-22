@@ -1,5 +1,5 @@
 'use client'
-import {X,ArrowUpRight}from 'lucide-react'
+import {X,ArrowUpRight, Github}from 'lucide-react'
 import Image from 'next/image'
 import {AnimatePresence,motion} from 'framer-motion'
 import { Button } from './ui/button'
@@ -43,7 +43,11 @@ const ProjectModal = ({ isOpen, setIsOpen }:ModalProps) => {
           <span className='text-secondary font-semibold'>Username: Guest </span>
           <span className='text-secondary font-semibold'>Password: Password123</span>
           <br/>
-          <Button onClick={()=>window.open('https://iskusadmin.vercel.app/auth/login?username=guest&password=Password123','_blank')} className='flex text-base pt-4 hover:text-secondary stroke-secondary' variant={'link'}>Click to Visit<ArrowUpRight/></Button>
+          <div className='flex justify-center' >
+          <Button onClick={()=>window.open('https://iskusadmin.vercel.app/auth/login?username=guest&password=Password123','_blank')} className='flex text-base pt-4  hover:text-secondary stroke-secondary' variant={'link'}>Click to Visit<ArrowUpRight/></Button>
+          <Button onClick={()=>window.open('https://github.com/95wordsmith/erp-app-iskus.git','_blank')} className='flex text-base pt-4 hover:text-secondary stroke-secondary' variant={'link'}>Github<Github/></Button>
+            
+          </div>
 
               </div>
               <div className='hidden md:block'>

@@ -51,17 +51,17 @@ const navVariant = {
 }
 
 const Navbar = () => {
-const [active,setActive]= useState('/')
+const [active,setActive]= useState('')
   return ( 
 
-  <motion.nav transition={{delay:0.3}} variants={navVariant} initial='outside' animate='inside' className=" flex z-50 w-full fixed px-8 md:px-20 lg:px-30  xl:px-36 top-8  justify-between items-center">
+  <motion.nav transition={{delay:0.2}} variants={navVariant} initial='outside' animate='inside' className=" flex z-50 w-full fixed px-8 md:px-20 lg:px-30  xl:px-36 top-8  justify-between items-center">
     <Image className="cursor-pointer" src={'/logo.png'} alt="logo" width={60} height={60}/>
    <div className=" hidden md:flex md:gap-4 lg:gap-7 xl:gap-16 text-xl">
     {navLinks.map((nav)=>(
       <Link onClick={()=>setActive(nav.title)} className={`${active===nav.title?'text-secondary  text-xl font-semibold':'text-primary'} hover:text-secondary hover:font-bold  `}  key={nav.id} href={nav.link}>{nav.title}</Link>
     ))}
    </div>
-    <Button className={cn('hidden md:block text-sm md:text-base  px-6 lg:px-8 ')}>Download CV</Button>
+    <Button onClick={()=>window.open('https://firebasestorage.googleapis.com/v0/b/my-portfolio-1e271.appspot.com/o/anthony-resume.pdf?alt=media&token=ddcf9a5f-b73d-46e3-8a40-bfc62bc2d43a','_blank')} className={cn('hidden md:block text-sm md:text-base  px-6 lg:px-8 ')}>Download CV</Button>
 
 
    <MobileNavbar>

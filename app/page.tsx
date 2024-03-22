@@ -6,6 +6,7 @@ import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 import Clients from "@/components/clients";
 import Projects from "@/components/projects";
+import ScrollBottom from "@/components/ScrollBottom";
 
 
 export default function Home() {
@@ -31,6 +32,7 @@ export default function Home() {
     </main>
     <Footer/>
     </div>
+    <ScrollBottom/>
    </>
     
   );

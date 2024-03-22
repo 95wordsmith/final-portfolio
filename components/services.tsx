@@ -1,7 +1,7 @@
+'use client'
+import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Card, CardDescription, CardTitle } from "./ui/card";
 import {
-  Archive,
-  Layers3,
   LayoutGrid,
   Database,
   AppWindow,
@@ -48,24 +48,47 @@ const layoutInfo = [
       "I offer training on popular software development technologies such as ReactJs and Node, along with comprehensive coverage of fundamental computer science concepts, data structures, and algorithms."
   },
 ];
+
 const Services = () => {
+
+
   return (
     <div id="services">
-      <h3 className="text-secondary font-semibold text-base pt-12 pb-4">
-        MY SERVICES
-      </h3>
-      <h1 className="text-primary font-bold text-4xl">What I Do</h1>
-      <div className="grid w-full py-12 box-border gap-10 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 ">
-        {layoutInfo.map((ele) => (
-          <Card className=" p-8 flex flex-col space-y-6" key={ele.title}>
+    <h3 className="text-secondary font-semibold text-base pt-12 pb-4">
+      MY SERVICES
+    </h3>
+    <h1 className="text-primary font-bold text-4xl">What I Do</h1>
+    <motion.div
+      className="grid w-full py-12 box-border gap-10 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3"
+      initial="hidden"
+      // animate="visible"
+      whileInView='visible'
+      viewport={{ once: true }}
+      variants={{
+        hidden: { opacity: 0 },
+        visible: { opacity: 1 },
+      }}
+      transition={{ staggerChildren: 0.3, delayChildren: 0.2 }}
+    >
+      {layoutInfo.map((ele) => (
+        <motion.div
+          key={ele.title}
+          variants={{
+            hidden: { opacity: 0, y: 30 }, // Initial state with slight offset
+            visible: { opacity: 1, y: 0 }, // Animate opacity and remove offset
+          }}
+          transition={{ duration: 0.5 }} // Adjust animation duration as needed
+        >
+          <Card className="p-8 flex flex-col space-y-6">
             {ele.icon}
             <CardTitle>{ele.title}</CardTitle>
-            <CardDescription >{ele.description}</CardDescription>
+            <CardDescription>{ele.description}</CardDescription>
           </Card>
-        ))}
-      </div>
-    </div>
-  );
+        </motion.div>
+      ))}
+    </motion.div>
+  </div>
+);
 };
 
 export default Services;
