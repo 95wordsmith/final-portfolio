@@ -99,7 +99,7 @@ const Resume = () => {
             <div className="relative flex flex-col space-y-7 w-[83%] mx-auto">
               {qualificationsData.map((ele) => (
                 <motion.div key={ele.title} initial={{ opacity: 0 }} viewport={{ once: true }} whileInView={{ opacity: 1 }} transition={{ delay: 1.5, duration: 1 }}>
-                  <Card className="p-8 h-60">
+                  <Card className="p-8 md:h-60">
                     <CardTitle className="pb-2">{ele.title}</CardTitle>
                     <p className="text-secondary pb-6 text-xs uppercase">{ele.institution}</p>
                     <CardDescription className={cn('text-base ')}>{ele.description}</CardDescription>
