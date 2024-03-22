@@ -71,6 +71,7 @@ const [active,setActive]= useState('')
         <Link onClick={()=>setActive(nav.title)} className={`hover:text-secondary text-center hover:font-semibold border-secondary  font-serif w-full text-primary text-3xl`} key={nav.id} href={nav.link}>{nav.title}</Link>
       </SheetClose>
     ))}
+        <Button onClick={()=>window.open('https://firebasestorage.googleapis.com/v0/b/my-portfolio-1e271.appspot.com/o/anthony-resume.pdf?alt=media&token=ddcf9a5f-b73d-46e3-8a40-bfc62bc2d43a','_blank')} className={cn(' font-serif text-xl flex justify-center items-center font-semibold px-5 py-7  ')}>Download CV</Button>
    </div>
    </MobileNavbar>
 

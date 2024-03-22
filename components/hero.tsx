@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Github, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
 import HeroCarousel from "./hero-carousel";
-import {motion} from 'framer-motion'
+import { motion } from "framer-motion";
 
 const socialLinks = [
   {
@@ -19,12 +19,15 @@ const socialLinks = [
     link: "https://www.linkedin.com/in/anthony-nana-yaw-atta-konadu-msc-pmp-%C2%AE-b7b252179/",
   },
 ];
- 
-
 
 const HeroPage = () => {
   return (
-    <motion.div className="flex md:justify-between flex-wrap" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
+    <motion.div
+      className="flex md:justify-between flex-wrap"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="lg:w-[65%] text-primary">
         <h2 className="font-semibold text-xl pb-4">
           Hello, <span className="text-secondary">I'm</span>
@@ -36,12 +39,12 @@ const HeroPage = () => {
           Full-Stack Software Engineer And Project Manager
         </h3>
         <p className="text-base/relaxed pb-12">
-          Experienced senior software engineer with over 7 years of
-          expertise in developing features across both backend and frontend
-          frameworks, possessing a collective background in project management
-          and the ability to effectively lead development teams through the
-          software development cycle. I am available for freelance,
-          consultation, or full-time work opportunities.
+          Experienced senior software engineer with over 7 years of expertise,
+          proficient in developing features across both backend and frontend
+          frameworks. Possessing a collective background in project management,
+          I have the ability to effectively lead development teams throughout
+          the software development cycle. Available for freelance, consultation,
+          or full-time work opportunities.
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 pb-3">
@@ -53,7 +56,9 @@ const HeroPage = () => {
                   key={ele.link}
                   className="bg-muted rounded-sm w-16 h-16 flex items-center justify-center"
                 >
-                  <Link target="_blank" href={ele.link}>{ele.icon}</Link>
+                  <Link target="_blank" href={ele.link}>
+                    {ele.icon}
+                  </Link>
                 </div>
               ))}
             </div>
@@ -64,22 +69,42 @@ const HeroPage = () => {
           </div>
         </div>
 
-        <div className="flex flex-wrap gap-8 lg:gap-12 xl:gap-16">
-          <motion.div className="shrink-0" initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.3 }}>
+        <div className="flex flex-wrap gap-8 lg:gap-16 xl:gap-24">
+          <motion.div
+            className="shrink-0"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ delay: 0.3 }}
+          >
             <h2 className="font-semibold pb-2 text-3xl">7+</h2>
             <p className="text-xs">YEARS OF EXPERIENCE</p>
           </motion.div>
-          <motion.div className="shrink-0" initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.4 }}>
+          <motion.div
+            className="shrink-0"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ delay: 0.4 }}
+          >
             <h2 className="font-semibold pb-2 text-3xl">10+</h2>
             <p className="text-xs">SOFTWARE PROJECTS</p>
           </motion.div>
-          <motion.div className="shrink-0" initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.5 }}>
+          <motion.div
+            className="shrink-0"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ delay: 0.5 }}
+          >
             <h2 className="font-semibold pb-2 text-3xl ">PMP®</h2>
             <p className="text-xs">PROJECT MANAGEMENT PROFESSIONAL</p>
           </motion.div>
         </div>
       </div>
-      <motion.div className="lg:w-[35] relative" initial={{ x: '100vw' }} animate={{ x: 0 }} transition={{ type: 'spring', stiffness: 120 }}>
+      <motion.div
+        className="lg:w-[35] relative"
+        initial={{ x: "100vw" }}
+        animate={{ x: 0 }}
+        transition={{ type: "spring", stiffness: 120 }}
+      >
         <Image
           className="contain z-50"
           src={"/profileImg.png"}

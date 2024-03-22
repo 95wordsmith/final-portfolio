@@ -13,7 +13,7 @@ import {
 const layoutInfo = [
   {
     icon: <AppWindow className="stroke-secondary  size-8" />,
-    title: "Application Developemnt",
+    title: "Application Development",
     description:
       "From web-based to mobile applications, I specialize in crafting tailored solutions that meet your business needs, ensuring scalability, performance, and user satisfaction throughout the development process.",
   },
@@ -21,13 +21,13 @@ const layoutInfo = [
     icon: <LayoutGrid className="stroke-secondary size-8" />,
     title: "Enterprise Resource Planning",
     description:
-      "Leveraging industry-leading ERP systems, I design and implement comprehensive solutions to streamline your organization's operations, optimizing efficiency and facilitating seamless communication across departments.",
+      "Leveraging industry-leading ERP systems, I design and implement comprehensive solutions to streamline your organization's operations, facilitating seamless communication across departments.",
   },
   {
     icon: <Database className="stroke-secondary size-8" />,
-    title: "Database Design and Management",
+    title: "Database Design & Mgt.",
     description:
-      "I specialize in creating robust database architectures tailored to your specific requirements, ensuring data integrity, security, and optimal performance.",
+      "I specialize in creating robust database architectures tailored to your specific requirements (Relational or Non-relational), ensuring data integrity, security, and optimal performance.",
   },
   {
     icon: <ShieldCheck className="stroke-secondary size-8" />,
@@ -39,7 +39,7 @@ const layoutInfo = [
     icon: <SquareKanban className="stroke-secondary size-8" />,
     title: "Project Planning",
     description:
-      "I work to meticulously craft project plans tailored to your unique needs and requirements, ensuring alignment with industry best practices and methodologies such as Agile, predictive, or hybrid approaches.",
+      "I meticulously craft project plans tailored to your unique needs and requirements, ensuring alignment with industry best practices and methodologies such as Agile, predictive, or hybrid approaches.",
   },
   {
     icon: <GraduationCap className="stroke-secondary size-8" />,
@@ -59,9 +59,8 @@ const Services = () => {
     </h3>
     <h1 className="text-primary font-bold text-4xl">What I Do</h1>
     <motion.div
-      className="grid w-full py-12 box-border gap-10 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3"
+      className="grid w-full py-12 gap-10 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3"
       initial="hidden"
-      // animate="visible"
       whileInView='visible'
       viewport={{ once: true }}
       variants={{
@@ -74,12 +73,12 @@ const Services = () => {
         <motion.div
           key={ele.title}
           variants={{
-            hidden: { opacity: 0, y: 30 }, // Initial state with slight offset
-            visible: { opacity: 1, y: 0 }, // Animate opacity and remove offset
+            hidden: { opacity: 0, y: 30 }, 
+            visible: { opacity: 1, y: 0 }, 
           }}
-          transition={{ duration: 0.5 }} // Adjust animation duration as needed
+          transition={{ duration: 0.5 }} 
         >
-          <Card className="p-8 flex flex-col space-y-6">
+          <Card className="p-8 flex flex-col space-y-6 ">
             {ele.icon}
             <CardTitle>{ele.title}</CardTitle>
             <CardDescription>{ele.description}</CardDescription>
