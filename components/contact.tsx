@@ -10,6 +10,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+
 import { Textarea } from "./ui/textarea";
 import { Input } from "@/components/ui/input";
 import * as z from "zod";
@@ -20,7 +21,7 @@ import { Phone, Mail, Send, Map, CircleCheckBig } from "lucide-react";
 import { Card } from "./ui/card";
 import { cn } from "@/lib/utils";
 import {motion} from 'framer-motion'
-
+import {useState} from 'react'
 const sideDetails = [
   {
     icon: <Map className="stroke-secondary size-9 " />,
@@ -226,6 +227,7 @@ const Contact = () => {
         </Card>
       </motion.div>
     </div>
+
     </div>
   );
 };

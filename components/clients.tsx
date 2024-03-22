@@ -2,6 +2,8 @@
 import { Card } from "./ui/card";
 import { motion } from "framer-motion";
 import Image from "next/image";
+
+
 const clientsData = [
   {
     name: "PMI",
@@ -13,7 +15,7 @@ const clientsData = [
   },
   {
     name: "ScratchCode",
-    link: "/scratch.JPG",
+    link: "/scratch2.svg",
   },
   {
     name: "DecentPak",

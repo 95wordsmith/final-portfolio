@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter,Roboto } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 const roboto =  Roboto({
@@ -25,7 +26,10 @@ export default function RootLayout({
 }>) {
   return (
     <html className="scroll-smooth" lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Navbar/>
+        {children}
+        </body>
     </html>
   );
 }
