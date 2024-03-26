@@ -61,7 +61,7 @@ const [active,setActive]= useState('')
       <Link onClick={()=>setActive(nav.title)} className={`${active===nav.title?'text-secondary  text-xl font-semibold':'text-primary'} hover:text-secondary hover:font-bold  `}  key={nav.id} href={nav.link}>{nav.title}</Link>
     ))}
    </div>
-    <Button onClick={()=>window.open('https://firebasestorage.googleapis.com/v0/b/my-portfolio-1e271.appspot.com/o/anthony-resume.pdf?alt=media&token=ddcf9a5f-b73d-46e3-8a40-bfc62bc2d43a','_blank')} className={cn('hidden md:block text-sm md:text-base  px-6 lg:px-8 ')}>Download CV</Button>
+    <Button onClick={()=>window.open('https://firebasestorage.googleapis.com/v0/b/my-portfolio-1e271.appspot.com/o/anthony-resumefinal.pdf?alt=media&token=d1cd0d39-5f1d-4b09-9c9c-22f295c44230','_blank')} className={cn('hidden md:block text-sm md:text-base  px-6 lg:px-8 ')}>Download CV</Button>
 
 
    <MobileNavbar>
@@ -71,7 +71,7 @@ const [active,setActive]= useState('')
         <Link onClick={()=>setActive(nav.title)} className={`hover:text-secondary text-center hover:font-semibold border-secondary  font-serif w-full text-primary text-3xl`} key={nav.id} href={nav.link}>{nav.title}</Link>
       </SheetClose>
     ))}
-        <Button onClick={()=>window.open('https://firebasestorage.googleapis.com/v0/b/my-portfolio-1e271.appspot.com/o/anthony-resume.pdf?alt=media&token=ddcf9a5f-b73d-46e3-8a40-bfc62bc2d43a','_blank')} className={cn(' font-serif text-xl flex justify-center items-center font-semibold px-5 py-7  ')}>Download CV</Button>
+        <Button onClick={()=>window.open('https://firebasestorage.googleapis.com/v0/b/my-portfolio-1e271.appspot.com/o/anthony-resumefinal.pdf?alt=media&token=d1cd0d39-5f1d-4b09-9c9c-22f295c44230','_blank')} className={cn(' font-serif text-xl flex justify-center items-center font-semibold px-5 py-7  ')}>Download CV</Button>
    </div>
    </MobileNavbar>
 
