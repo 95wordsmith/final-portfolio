@@ -92,7 +92,7 @@ const Contact = () => {
       opacity: 1,
       y: 0,
       transition: {
-        delay: 0.5,
+        delay: 0.4,
         duration: 0.5,
       },
     },
@@ -105,7 +105,7 @@ const Contact = () => {
     visible: {
       opacity: 1,
       transition: {
-        delay: 1.5,
+        delay: 1.1,
         duration: 0.5,
       },
     },
@@ -114,7 +114,7 @@ const Contact = () => {
     <div id="contact" >
    
     <p className="text-center text-secondary text-sm pt-12 pb-2">CONTACT</p>
-   <h1 className="text-primary font-bold text-4xl pb-8 text-center">Contact With Me</h1>
+   <h1 className="text-primary font-bold text-4xl pb-8 text-center">Contact Me</h1>
     <div className="lg:flex gap-10">
       <div className="flex-initial">
         {sideDetails.map((ele,index) => (

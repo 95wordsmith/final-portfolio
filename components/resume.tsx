@@ -90,7 +90,7 @@ const Resume = () => {
             initial={{ opacity: 0 }}
             viewport={{ once: true }}
             whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.8, duration: 0.5 }} 
+            transition={{ delay: 0.5, duration: 0.5 }} 
           >
             Education & Qualifications
           </motion.h1>

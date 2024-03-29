@@ -29,7 +29,7 @@ const Clients = () => {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.5, ease: "easeInOut" },
+      transition: { duration: 0.4, ease: "easeInOut" },
     },
   };
 
