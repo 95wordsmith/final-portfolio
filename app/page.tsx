@@ -22,7 +22,6 @@ export default function Home() {
     <div className="border-2 border-muted mt-10"></div>
     <Projects/>
     <div className="border-2 border-muted mt-10"></div>
-
     <Resume/>
     <div className="border-2 border-muted mt-10"></div>
     <Clients/>

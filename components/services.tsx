@@ -1,5 +1,5 @@
 'use client'
-import { motion, useInView, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Card, CardDescription, CardTitle } from "./ui/card";
 import {
   LayoutGrid,
@@ -10,39 +10,40 @@ import {
   ShieldCheck
 } from "lucide-react";
 
+const iconStyles = 'stroke-secondary hover:stroke-primary hover:scale-110  size-8'
 const layoutInfo = [
   {
-    icon: <AppWindow className="stroke-secondary  size-8" />,
+    icon: <AppWindow className={iconStyles} />,
     title: "Application Development",
     description:
       "From web-based to mobile applications, I specialize in crafting tailored solutions that meet your business needs, ensuring scalability, performance, and user satisfaction throughout the development process.",
   },
   {
-    icon: <LayoutGrid className="stroke-secondary size-8" />,
+    icon: <LayoutGrid className={iconStyles} />,
     title: "Enterprise Resource Planning",
     description:
       "Leveraging industry-leading ERP systems, I design and implement comprehensive solutions to streamline your organization's operations, facilitating seamless communication across departments.",
   },
   {
-    icon: <Database className="stroke-secondary size-8" />,
+    icon: <Database className={iconStyles} />,
     title: "Database Design & Mgt.",
     description:
       "I specialize in creating robust database architectures tailored to your specific requirements (Relational or Non-relational), ensuring data integrity, security, and optimal performance.",
   },
   {
-    icon: <ShieldCheck className="stroke-secondary size-8" />,
+    icon: <ShieldCheck className={iconStyles} />,
     title: "Quality Assurance and Testing",
     description:
       "I conduct thorough testing throughout the development lifecycle to identify and rectify issues, ensuring that your software meets the highest standards of quality, reliability, and user experience.",
   },
   {
-    icon: <SquareKanban className="stroke-secondary size-8" />,
+    icon: <SquareKanban className={iconStyles} />,
     title: "Project Planning",
     description:
       "I meticulously craft project plans tailored to your unique needs and requirements, ensuring alignment with industry best practices and methodologies such as Agile, predictive, or hybrid approaches.",
   },
   {
-    icon: <GraduationCap className="stroke-secondary size-8" />,
+    icon: <GraduationCap className={iconStyles} />,
     title: "Software Development Training",
     description:
       "I offer training on popular software development technologies such as ReactJs and Node, along with comprehensive coverage of fundamental computer science concepts, data structures, and algorithms."

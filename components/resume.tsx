@@ -5,20 +5,21 @@ import { Card,CardTitle,CardDescription } from "./ui/card";
 import {motion} from 'framer-motion'
 
 const experienceData=[
-  {
-    role:'M.I.S Officer',
-    company:'Ghana Free Zones Authority (01/21-PRESENT)',
-    description:'Collaborated and assisted in building, testing and deployment of a world-bank funded ERP system for company operations.'
-  },
+
   {
     role:'Senior Software Engineer ',
     company:'Scratch Code Academy (03/19-01/21:FT) (01/21-PRESENT)',
     description:'Developed and Deployed over 10+ full-stack applications with ReactJs, NextJs and NodeJs and assisted in the mentoring and training of junior or aspiring developers.'
   },
   {
+    role:'M.I.S Officer',
+    company:'Ghana Free Zones Authority (01/21-PRESENT)',
+    description:'Collaborated and assisted in building, testing and deployment of a world-bank funded ERP system for company operations.'
+  },
+  {
     role:'Frontend Engineer',
     company:'DecentPak Ventures (08/18-03/19)',
-    description:'Implemented payment features on the e-commerce platform and dashboard analytics with charts to track user enagement.'
+    description:'Led the development of two e-commerce platforms, integrating vendor management, medical query systems, and secure payment gateways.'
   },
   
 
@@ -53,7 +54,7 @@ const Resume = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ delay: 0.3, duration: 0.6 }} 
+        transition={{ delay: 0.2, duration: 0.4 }} 
       >
         My Resume
       </motion.h1>
@@ -64,7 +65,7 @@ const Resume = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.5, duration: 0.5 }} 
+            transition={{ delay: 0.3, duration: 0.3 }} 
           >
             Job Experience
           </motion.h1>
@@ -72,7 +73,7 @@ const Resume = () => {
             {/* content */}
             <div className="flex flex-col space-y-7 w-[83%] mx-auto">
               {experienceData.map((ele) => (
-                <motion.div key={ele.role} initial={{ opacity: 0 }} viewport={{ once: true }} whileInView={{ opacity: 1 }} transition={{ delay: 0.7, duration: 1 }}>
+                <motion.div key={ele.role} initial={{ opacity: 0 }} viewport={{ once: true }} whileInView={{ opacity: 1 }} transition={{ delay: 0.2, duration: 1 }}>
                   <Card className="p-8 lg:h-60">
                     <CardTitle className="pb-2">{ele.role}</CardTitle>
                     <p className="text-secondary pb-6 text-xs uppercase">{ele.company}</p>
@@ -90,7 +91,7 @@ const Resume = () => {
             initial={{ opacity: 0 }}
             viewport={{ once: true }}
             whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.5 }} 
+            transition={{ delay: 0.3, duration: 1 }} 
           >
             Education & Qualifications
           </motion.h1>

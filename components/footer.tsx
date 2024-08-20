@@ -2,6 +2,7 @@ import { Github, Linkedin, Twitter, Instagram } from "lucide-react";
 import Image from "next/image";
 
 import Link from "next/link";
+import Logo from "./ui/logo";
 
 const Footer = () => {
   const socialLinks = [
@@ -25,7 +26,8 @@ const Footer = () => {
   return (
     <footer className="w-full flex gap-8 flex-col  items-center pt-16 pb-4">
       <div>
-      <Image src={"/logo.png"} alt="logo" width={55} height={55} />
+        <Logo width={55} height={55}/>
+      {/* <Image src={"/logo.png"} alt="logo" width={55} height={55} /> */}
       </div>
       <div className="flex gap-3">
         {socialLinks.map((ele) => {

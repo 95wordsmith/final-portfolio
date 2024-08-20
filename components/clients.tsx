@@ -1,5 +1,6 @@
 "use client";
 import { Card } from "./ui/card";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -8,18 +9,22 @@ const clientsData = [
   {
     name: "PMI",
     link: "/pmilogo.jpg",
+    url:'https://www.pmi.org/'
   },
   {
     name: "GFZA",
     link: "/gfza.JPG",
+    url:'https://gfza.gov.gh/'
   },
   {
     name: "ScratchCode",
     link: "/scratch2.svg",
+    url:'https://lms.scratchcode.org/'
   },
   {
     name: "DecentPak",
     link: "/decent.JPG",
+    url:'https://www.decentpak.com/'
   },
 ];
 
@@ -51,6 +56,7 @@ const Clients = () => {
             whileInView="visible"
             variants={variants}
           >
+            <Link href={ele.url} target="_blank">
             <Card className=" cursor-pointer p-10 flex gap-3 justify-center items-center">
               <Image
                 className="rounded-full"
@@ -59,10 +65,11 @@ const Clients = () => {
                 width={80}
                 height={80}
               />
-              <p className="text-secondary font-semibold  text-2xl">
+              <p className="text-secondary font-semibold tracking-wide leading-none hover:text-primary hover:scale-90 text-2xl">
                 {ele.name}
               </p>
             </Card>
+            </Link>
           </motion.div>
         ))}
       </div>

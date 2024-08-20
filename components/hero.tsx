@@ -4,6 +4,8 @@ import { Github, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
 import HeroCarousel from "./hero-carousel";
 import { motion } from "framer-motion";
+import { TextEffect } from "./ui/textEffect";
+import { cn } from "@/lib/utils";
 
 const socialLinks = [
   {
@@ -38,14 +40,17 @@ const HeroPage = () => {
         <h3 className="font-semibold text-2xl pb-8">
           Full-Stack Software Engineer And Project Manager
         </h3>
-        <p className="text-base/relaxed pb-12">
-          Experienced senior software engineer with over 7 years of expertise,
+        <TextEffect className={cn('text-base/relaxed pb-12')} >
+        Experienced senior software engineer with over 7 years of expertise,
           proficient in developing features across both backend and frontend
           frameworks. Possessing a collective background in project management,
           I have the ability to effectively lead development teams throughout
           the software development cycle. Available for freelance, consultation,
           or full-time work opportunities.
-        </p>
+        </TextEffect>
+        {/* <p className="">
+      
+        </p> */}
 
         <div className="grid grid-cols-1 lg:grid-cols-2 pb-3">
           <div>
